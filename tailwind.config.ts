@@ -16,6 +16,13 @@ const config: Config = {
       fontFamily: {
         'karla': ['Karla', 'sans-serif'],
       },
+      colors: {
+        'purple': '#8D78FF',
+        'purple-dark': '#6B5DE0',
+        'purple-extra-dark': '#5246BF',
+        'white': '#FFFFFF',
+        'black': '#000000',
+      },
     },
   },
   plugins: [],

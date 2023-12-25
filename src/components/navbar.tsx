@@ -1,8 +1,7 @@
 'use client';
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'About', href: '#', current: false },
@@ -19,7 +18,7 @@ export default function NavBar() {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="mx-auto px-2 sm:px-6 lg:px-8 font-karla bg-[#8D78FF] lg:rounded-b-xl sm:rounded-none">
+          <div className="mx-auto px-2 sm:px-6 lg:px-8 font-karla bg-purple lg:rounded-b-xl sm:rounded-none">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-1 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -39,7 +38,7 @@ export default function NavBar() {
                     key="Homepage"
                     href="/"
                   >
-                    <p className="font-karla font-bold text-2xl text-[#FFFFFF]">Peter Twarecki</p>
+                    <p className="font-karla font-bold text-2xl text-white">Peter Twarecki</p>
                   </a>
                   
                 </div>
@@ -51,7 +50,7 @@ export default function NavBar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-black text-white' : 'text-white hover:bg-[#6B5DE0]',
+                          item.current ? 'bg-purple-extra-dark text-white' : 'text-white hover:bg-purple-dark',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -65,7 +64,7 @@ export default function NavBar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden bg-[#8D78FF] rounded-b-xl">
+          <Disclosure.Panel className="sm:hidden bg-purple rounded-b-xl">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
