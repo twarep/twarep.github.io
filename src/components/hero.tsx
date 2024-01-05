@@ -1,38 +1,42 @@
 'use client';
 
 import Image from "next/image";
+import Modal from "./modal";
 
 export default function Hero() {
   return (
     <div className="bg-white font-karla">
-      <div className="relative px-6 pt-0 lg:px-8">
-        <div className="flex mx-auto max-w-3xl py-32 sm:py-48 lg:py-46">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
+      <div className="relative px-6 lg:px-8 overflow-hidden h-[90vh]">
+        <div className="flex flex-col sm:flex-row mx-auto pt-24">
+          <div className="basis-1/2 items-center text-center justify-center order-2 sm:order-1">
+            <h1 className="sm:text-3xl lg:text-6xl font-bold">
+              Hey, I'm Peter.<br/> Nice to see you!
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+            <div className="flex justify-center pt-6 gap-x-6">
+            </div>
+            <p className="text-lg leading-8 text-gray-600">
+              I create solutions for your business needs with code. Need an enhanced user experience? Elevated engagement?
+              Streamlined data analytics and insights? Let's talk. 
+
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-purple px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </a>
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+                More About Me <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
-          <div className="pl-24">
+          <div className="px-20 md:pl-20 basis-1/2 pointer-events-none order-1 sm:order-2">
             <Image
               src="/twa.png"
               alt="Picture of Peter"
-              width="2000"
-              height="3000"
+              width="500"
+              height="2000"
             />
           </div>
         </div>

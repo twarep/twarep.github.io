@@ -7,6 +7,10 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'lg': '1024px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -17,9 +21,9 @@ const config: Config = {
         'karla': ['Karla', 'sans-serif'],
       },
       colors: {
-        'purple': '#8D78FF',
-        'purple-dark': '#6B5DE0',
-        'purple-extra-dark': '#5246BF',
+        'purple-light': '#8D78FF',
+        'purple': '#6B5DE0', // nice blue: #3e63b0
+        'purple-dark': '#5246BF',
         'white': '#FFFFFF',
         'black': '#000000',
       },
